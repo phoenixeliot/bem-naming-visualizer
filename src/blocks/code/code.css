@@ -1,8 +1,8 @@
-@import './_value/code_value.css';
-@import './_modifier/code_modifier.css';
-@import './_element/code_element.css';
-@import './_block/code_block.css';
+@import "./_value/code_value.css";
+@import "./_modifier/code_modifier.css";
+@import "./_element/code_element.css";
+@import "./_block/code_block.css";
 
 .code {
-    font-family: "Roboto Mono"
+  font-family: "Roboto Mono";
 }
