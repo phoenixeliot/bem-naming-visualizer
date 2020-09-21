@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { setBemParts } from "features/bemParts/bemPartsSlice";
 import ContentEditable from "react-contenteditable";
@@ -16,27 +16,29 @@ const generateSpans = (parts) => {
 
 const parseClass = (text) => {
   const partsRegex = /(?<block>[a-zA-Z0-9\\-]+)(?<element>__[a-zA-Z0-9\\-]*)?(?<modifier>_[a-zA-Z0-9\\-]*)?(?<value>_[a-zA-Z0-9\\-]*)?/;
-  const parts = text.match(partsRegex).groups;
+  const match = text.match(partsRegex);
+  if (match === null) {
+    return { block: "", element: "", modifier: "", value: "" };
+  }
+  const parts = match.groups;
   const plainParts = Object.assign({}, parts); // Make it serializable
   Object.keys(plainParts).forEach((key) => {
     plainParts[key] = plainParts[key] || "";
   });
-  debugger;
   return plainParts;
 };
 
 const ColoredBemCode = ({ parts, setBemParts }) => {
   const html = generateSpans(parts);
-  debugger;
   return (
     <ContentEditable
+      spellCheck="false"
       html={html}
       onChange={(e) => {
         const html = e.target.value;
         const el = document.createElement("div");
         el.innerHTML = html;
         const textContent = el.textContent;
-        debugger;
         setBemParts(parseClass(textContent));
       }}
     />

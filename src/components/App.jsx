@@ -1,5 +1,6 @@
 import React from "react";
 import ColoredBemCode from "./ColoredBemCode";
+import BemPartInput from "./BemPartInput";
 import { connect } from "react-redux";
 
 const App = ({ bemParts }) => {
@@ -9,19 +10,19 @@ const App = ({ bemParts }) => {
         <h2>BEM parts</h2>
         <label>
           Block:
-          <input></input>
+          <BemPartInput partName="block" value={bemParts.block} />
         </label>
         <label>
           Element:
-          <input></input>
+          <BemPartInput partName="element" value={bemParts.element} />
         </label>
         <label>
           Modifier:
-          <input></input>
+          <BemPartInput partName="modifier" value={bemParts.modifier} />
         </label>
         <label>
           Modifier value:
-          <input></input>
+          <BemPartInput partName="value" value={bemParts.value} disabled={!bemParts.modifier} />
         </label>
       </section>
       <section>
