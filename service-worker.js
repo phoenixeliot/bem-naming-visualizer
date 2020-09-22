@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bem-naming-visualizer/precache-manifest.721e8c239eb214c16a06b5b74cc11f2e.js"
+  "/bem-naming-visualizer/precache-manifest.77275d843454564dd401183a2ddff00b.js"
 );
 
 self.addEventListener('message', (event) => {
