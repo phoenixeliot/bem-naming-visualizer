@@ -32,10 +32,12 @@ const App = ({ bemParts }) => {
         <ColoredBemCode parts={bemParts} />
         {bemParts.unknown ? <div className="bem-editor__parse-error">Invalid BEM pattern!</div> : null}
       </section>
-      <section className="bem-editor__html-example">
-        <h2>Usage in HTML</h2>
-        <ColoredBemHtmlExample parts={bemParts} />
-      </section>
+      {!bemParts.unknown && bemParts.block ? (
+        <section className="bem-editor__html-example">
+          <h2>Usage in HTML</h2>
+          <ColoredBemHtmlExample parts={bemParts} />
+        </section>
+      ) : null}
     </div>
   );
 };

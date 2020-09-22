@@ -48,12 +48,22 @@ const ColoredBemCode = ({ parts, setBemParts }) => {
 };
 
 export const ColoredBemHtmlExample = ({ parts }) => {
+  if (parts.unknown) {
+    debugger;
+    return <div></div>;
+  }
   const mainParts = {
     block: parts.block,
     element: parts.element,
   };
+  const allParts = {
+    block: parts.block,
+    element: parts.element,
+    modifier: parts.modifier,
+    value: parts.value,
+  };
   const class1 = generateSpans(mainParts);
-  const class2 = generateSpans(parts);
+  const class2 = generateSpans(allParts);
   return (
     <p className="code code-block">
       <span>&lt;div class="</span>
