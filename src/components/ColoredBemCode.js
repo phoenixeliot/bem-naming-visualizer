@@ -4,7 +4,6 @@ import { setBemParts } from "features/bemParts/bemPartsSlice";
 import ContentEditable from "react-contenteditable";
 
 const generateSpans = (parts) => {
-  debugger;
   return [
     `<span class="code code_unknown">${parts.unknown || ""}</span>`,
     `<span class="code code_block">${parts.block || ""}</span>`,
@@ -20,7 +19,6 @@ const parseClass = (text) => {
   const partsRegex = /^(?<block>[a-zA-Z0-9\\-]+)(?<element>__[a-zA-Z0-9\\-]*)?(?<modifier>_[a-zA-Z0-9\\-]*)?(?<value>_[a-zA-Z0-9\\-]*)?$/;
   const match = text.match(partsRegex);
   if (match === null) {
-    debugger;
     return { block: "", element: "", modifier: "", value: "", unknown: text };
   }
   const parts = match.groups;
@@ -32,7 +30,6 @@ const parseClass = (text) => {
 };
 
 const ColoredBemCode = ({ parts, setBemParts }) => {
-  debugger;
   const html = generateSpans(parts);
   return (
     <ContentEditable
