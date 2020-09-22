@@ -8,22 +8,24 @@ const App = ({ bemParts }) => {
     <div className="bem-editor">
       <section className="bem-editor__part-inputs">
         <h2>BEM parts</h2>
-        <label>
-          Block:
-          <BemPartInput partName="block" value={bemParts.block} />
-        </label>
-        <label>
-          Element:
-          <BemPartInput partName="element" value={bemParts.element} />
-        </label>
-        <label>
-          Modifier:
-          <BemPartInput partName="modifier" value={bemParts.modifier} />
-        </label>
-        <label>
-          Modifier value:
-          <BemPartInput partName="value" value={bemParts.value} disabled={!bemParts.modifier} />
-        </label>
+        <div className="bem-editor__input-list">
+          <label className="bem-editor__input-row">
+            Block:
+            <BemPartInput partName="block" value={bemParts.block} />
+          </label>
+          <label className="bem-editor__input-row">
+            Element:
+            <BemPartInput partName="element" value={bemParts.element} />
+          </label>
+          <label className="bem-editor__input-row">
+            Modifier:
+            <BemPartInput partName="modifier" value={bemParts.modifier} />
+          </label>
+          <label className="bem-editor__input-row">
+            Modifier value:
+            <BemPartInput partName="value" value={bemParts.value} disabled={!bemParts.modifier} />
+          </label>
+        </div>
       </section>
       <section className="bem-editor__class-name">
         <h2>Class name</h2>

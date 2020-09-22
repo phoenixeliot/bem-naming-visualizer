@@ -1,6 +1,7 @@
 {
   "name": "bem-naming-visualizer",
   "version": "0.0.1",
+  "homepage": "https://phoenixeliot.github.io/bem-naming-visualizer",
   "devDependencies": {
     "react-scripts": "^3.4.1",
     "react-test-renderer": "^16.13.1"
@@ -22,7 +23,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test --env=node",
-    "deploy": "gh-pages -d public"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",

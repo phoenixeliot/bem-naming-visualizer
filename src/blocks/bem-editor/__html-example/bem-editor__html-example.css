@@ -1,3 +1,4 @@
 .bem-editor__html-example {
   grid-area: span 1;
+  align-self: end;
 }
