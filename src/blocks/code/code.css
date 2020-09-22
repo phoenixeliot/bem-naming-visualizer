@@ -4,5 +4,5 @@
 @import "./_block/code_block.css";
 
 .code {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", monospace;
 }

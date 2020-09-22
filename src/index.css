@@ -1,2 +1,4 @@
 @import "./blocks/code/code.css";
+@import "./blocks/code-block/code-block.css";
 @import "./blocks/bem-editor/bem-editor.css";
+@import "./blocks/editable-class-name/editable-class-name.css";

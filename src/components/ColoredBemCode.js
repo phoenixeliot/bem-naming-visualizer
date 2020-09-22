@@ -33,6 +33,7 @@ const ColoredBemCode = ({ parts, setBemParts }) => {
   const html = generateSpans(parts);
   return (
     <ContentEditable
+      className="editable-class-name"
       spellCheck="false"
       html={html}
       onChange={(e) => {
@@ -43,6 +44,24 @@ const ColoredBemCode = ({ parts, setBemParts }) => {
         setBemParts(parseClass(textContent));
       }}
     />
+  );
+};
+
+export const ColoredBemHtmlExample = ({ parts }) => {
+  const mainParts = {
+    block: parts.block,
+    element: parts.element,
+  };
+  const class1 = generateSpans(mainParts);
+  const class2 = generateSpans(parts);
+  return (
+    <p className="code code-block">
+      <span>&lt;div class="</span>
+      <span dangerouslySetInnerHTML={{ __html: class1 }}></span>
+      <span> </span>
+      <span dangerouslySetInnerHTML={{ __html: class2 }}></span>
+      <span>"&gt;</span>
+    </p>
   );
 };
 
