@@ -58,8 +58,12 @@ export const ColoredBemHtmlExample = ({ parts }) => {
     <p className="code code-block">
       <span>&lt;div class="</span>
       <span dangerouslySetInnerHTML={{ __html: class1 }}></span>
-      <span> </span>
-      <span dangerouslySetInnerHTML={{ __html: class2 }}></span>
+      {class1 !== class2 ? (
+        <>
+          <span> </span>
+          <span dangerouslySetInnerHTML={{ __html: class2 }}></span>
+        </>
+      ) : null}
       <span>"&gt;</span>
     </p>
   );
