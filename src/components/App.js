@@ -5,8 +5,8 @@ import { connect } from "react-redux";
 
 const App = ({ bemParts }) => {
   return (
-    <div>
-      <section>
+    <div class="bem-editor">
+      <section class="bem-editor__part-inputs">
         <h2>BEM parts</h2>
         <label>
           Block:
@@ -25,11 +25,12 @@ const App = ({ bemParts }) => {
           <BemPartInput partName="value" value={bemParts.value} disabled={!bemParts.modifier} />
         </label>
       </section>
-      <section>
+      <section class="bem-editor__class-name">
         <h2>Class name</h2>
         <ColoredBemCode parts={bemParts} />
+        {bemParts.unknown ? <div class="bem-editor__parse-error">Invalid BEM pattern!</div> : null}
       </section>
-      <section>
+      <section class="bem-editor__html-example">
         <h2>Usage in HTML</h2>
       </section>
     </div>

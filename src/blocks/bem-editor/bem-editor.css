@@ -1,0 +1,12 @@
+@import "./__part-inputs/bem-editor__part-inputs.css";
+@import "./__parse-error/bem-editor__parse-error.css";
+@import "./__html-example/bem-editor__html-example.css";
+@import "./__class-name/bem-editor__class-name.css";
+
+.bem-editor {
+  margin: 0 auto;
+  max-width: 780px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}

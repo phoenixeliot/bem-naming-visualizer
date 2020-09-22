@@ -8,6 +8,9 @@ const partPrefixes = {
 };
 
 const cleanPartValue = (partName, value) => {
+  if (partPrefixes[partName] === undefined) {
+    return value;
+  }
   if (value == "") {
     return "";
   }
@@ -33,10 +36,12 @@ const bemPartsSlice = createSlice({
   reducers: {
     setBemParts(state, action) {
       const bemParts = action.payload;
+      debugger;
       Object.keys(bemParts).forEach((partName) => {
         state[partName] = cleanPartValue(partName, bemParts[partName]);
       });
       rearrangeValues(state);
+      debugger;
     },
     setBemPart(state, action) {
       const { partName, value } = action.payload;

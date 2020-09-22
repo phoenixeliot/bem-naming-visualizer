@@ -4,31 +4,35 @@ import { setBemParts } from "features/bemParts/bemPartsSlice";
 import ContentEditable from "react-contenteditable";
 
 const generateSpans = (parts) => {
-  // const parts = parseClass(text);
-
+  debugger;
   return [
-    `<span class="code code_block">${parts.block}</span>`,
-    `<span class="code code_element">${parts.element}</span>`,
-    `<span class="code code_modifier">${parts.modifier}</span>`,
-    `<span class="code code_value">${parts.value}</span>`,
+    `<span class="code code_unknown">${parts.unknown || ""}</span>`,
+    `<span class="code code_block">${parts.block || ""}</span>`,
+    `<span class="code code_element">${parts.element || ""}</span>`,
+    `<span class="code code_modifier">${parts.modifier || ""}</span>`,
+    `<span class="code code_value">${parts.value || ""}</span>`,
   ].join("");
 };
 
+const keys = ["unknown", "block", "element", "modifier", "value"];
+
 const parseClass = (text) => {
-  const partsRegex = /(?<block>[a-zA-Z0-9\\-]+)(?<element>__[a-zA-Z0-9\\-]*)?(?<modifier>_[a-zA-Z0-9\\-]*)?(?<value>_[a-zA-Z0-9\\-]*)?/;
+  const partsRegex = /^(?<block>[a-zA-Z0-9\\-]+)(?<element>__[a-zA-Z0-9\\-]*)?(?<modifier>_[a-zA-Z0-9\\-]*)?(?<value>_[a-zA-Z0-9\\-]*)?$/;
   const match = text.match(partsRegex);
   if (match === null) {
-    return { block: "", element: "", modifier: "", value: "" };
+    debugger;
+    return { block: "", element: "", modifier: "", value: "", unknown: text };
   }
   const parts = match.groups;
   const plainParts = Object.assign({}, parts); // Make it serializable
-  Object.keys(plainParts).forEach((key) => {
+  keys.forEach((key) => {
     plainParts[key] = plainParts[key] || "";
   });
   return plainParts;
 };
 
 const ColoredBemCode = ({ parts, setBemParts }) => {
+  debugger;
   const html = generateSpans(parts);
   return (
     <ContentEditable
