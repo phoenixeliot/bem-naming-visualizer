@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e1c4871296a6c76609d53b1ea0472d81",
+    "revision": "570980cb74d46ce93f548a96744b32b4",
     "url": "/bem-naming-visualizer/index.html"
   },
   {
-    "revision": "2e0020faf6bff91627af",
+    "revision": "8d0cf83896cc12643220",
     "url": "/bem-naming-visualizer/static/css/main.db5851d9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bem-naming-visualizer/static/js/2.7fb1d1af.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e0020faf6bff91627af",
-    "url": "/bem-naming-visualizer/static/js/main.fb65b4aa.chunk.js"
+    "revision": "8d0cf83896cc12643220",
+    "url": "/bem-naming-visualizer/static/js/main.123ce6c4.chunk.js"
   },
   {
     "revision": "9b4ab5f5c8b10af99c50",
