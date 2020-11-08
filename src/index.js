@@ -19,7 +19,9 @@ function updateFromHash() {
 }
 
 window.addEventListener("hashchange", updateFromHash, false);
-updateFromHash();
+if (window.location.hash !== "") {
+  updateFromHash();
+}
 
 render(
   <Provider store={store}>
