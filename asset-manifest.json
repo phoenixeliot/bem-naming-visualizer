@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bem-naming-visualizer/static/css/main.db5851d9.chunk.css",
-    "main.js": "/bem-naming-visualizer/static/js/main.9178314f.chunk.js",
-    "main.js.map": "/bem-naming-visualizer/static/js/main.9178314f.chunk.js.map",
+    "main.js": "/bem-naming-visualizer/static/js/main.f588d049.chunk.js",
+    "main.js.map": "/bem-naming-visualizer/static/js/main.f588d049.chunk.js.map",
     "runtime-main.js": "/bem-naming-visualizer/static/js/runtime-main.3bbc5e19.js",
     "runtime-main.js.map": "/bem-naming-visualizer/static/js/runtime-main.3bbc5e19.js.map",
     "static/js/2.7fb1d1af.chunk.js": "/bem-naming-visualizer/static/js/2.7fb1d1af.chunk.js",
     "static/js/2.7fb1d1af.chunk.js.map": "/bem-naming-visualizer/static/js/2.7fb1d1af.chunk.js.map",
     "index.html": "/bem-naming-visualizer/index.html",
-    "precache-manifest.89eb3b6699c8a98f24834011504e9c34.js": "/bem-naming-visualizer/precache-manifest.89eb3b6699c8a98f24834011504e9c34.js",
+    "precache-manifest.97fbae3e66e2651cc925a1559a7605c4.js": "/bem-naming-visualizer/precache-manifest.97fbae3e66e2651cc925a1559a7605c4.js",
     "service-worker.js": "/bem-naming-visualizer/service-worker.js",
     "static/css/main.db5851d9.chunk.css.map": "/bem-naming-visualizer/static/css/main.db5851d9.chunk.css.map",
     "static/js/2.7fb1d1af.chunk.js.LICENSE.txt": "/bem-naming-visualizer/static/js/2.7fb1d1af.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3bbc5e19.js",
     "static/js/2.7fb1d1af.chunk.js",
     "static/css/main.db5851d9.chunk.css",
-    "static/js/main.9178314f.chunk.js"
+    "static/js/main.f588d049.chunk.js"
   ]
 }
