@@ -1,5 +1,5 @@
 import React from "react";
-import BemEditor from "./BemPartInput";
+import BemEditor from "./BemEditor";
 import { connect } from "react-redux";
 
 const App = ({ bemParts }) => {
